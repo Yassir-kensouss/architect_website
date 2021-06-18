@@ -1,0 +1,27 @@
+@import "variables";
+
+/**************** Texts *******************/
+
+.fl-heading {
+  font-size: $h1;
+  color: $black;
+  font-weight: 300;
+}
+
+.sl-heading {
+  font-size: $h2;
+  color: $black;
+  font-weight: 300;
+}
+
+.tl-heading {
+  font-size: $h3;
+  color: $black;
+  font-weight: 400;
+}
+
+.lead {
+  font-size: $paragraphe;
+  color: $hl_gray;
+  line-height: $line-height;
+}
