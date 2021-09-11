@@ -1,0 +1,35 @@
+@import "../variables";
+
+.menu-wrapper {
+  background-color: whitesmoke;
+
+  .nav-item {
+    a {
+      font-size: 4rem;
+      margin-left: 5rem;
+      font-weight: 600;
+      color: $black;
+      position: relative;
+      transition: 0.3s cubic-bezier(0.94, 0, 0.43, 1);
+
+      &:hover {
+        padding-left: 2rem;
+        &::before {
+          width: 120%;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -10px;
+        background-color: $yellow;
+        width: 0%;
+        height: 100%;
+        transition: 0.2s cubic-bezier(0.94, 0, 0.43, 1);
+        z-index: -1;
+      }
+    }
+  }
+}

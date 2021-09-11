@@ -1,0 +1,225 @@
+/************* import utilities ************/
+@import "../utilities";
+@import "../variables";
+@import "react-slideshow-image/dist/styles.css";
+.logo-wrapper {
+  height: 60px;
+  .logo {
+    font-family: poppins;
+    color: $hl_gray;
+  }
+}
+
+// Humberger menu
+.menu-icon-wrapper {
+  background-color: $yellow;
+
+  button {
+    transition: 0.2s ease-in-out;
+  }
+
+  &:hover {
+    button > div {
+      &:nth-child(1) {
+        width: 17px;
+      }
+      &:nth-child(2) {
+        width: 17px;
+      }
+      &:nth-child(3) {
+        width: 17px;
+      }
+    }
+  }
+
+  &:active {
+    button {
+      padding-left: 30px;
+    }
+    button > div {
+      &:nth-child(1) {
+        transform-origin: left left;
+        transform: rotate(32deg) translate(5px, 1px);
+        width: 14px;
+      }
+      &:nth-child(2) {
+        transform-origin: right right;
+        width: 20px;
+        transform: translateX(-5px);
+      }
+      &:nth-child(3) {
+        transform-origin: left left;
+        transform: rotate(-32deg) translate(5px, -1px);
+        width: 14px;
+      }
+    }
+  }
+
+  button > div {
+    height: 2px;
+    background-color: $black;
+    margin-bottom: 5px;
+    transition: 0.2s ease-in-out;
+
+    &:nth-child(1) {
+      width: 17px;
+    }
+    &:nth-child(2) {
+      width: 14px;
+    }
+    &:nth-child(3) {
+      width: 11px;
+    }
+  }
+}
+
+.header-content-wrapper {
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: minmax(100%, 800px);
+  // height: 500px;
+  // height: calc(100vh - 65px);
+  // max-height: calc(100vh - 65px);
+  color: $hl_gray;
+
+  .social-icons-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    & > div {
+      height: 70px;
+      width: 100%;
+      display: grid;
+      place-items: center;
+      transition: 0.2s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        background-color: $yellow;
+        color: white;
+        padding-right: 8px;
+      }
+    }
+  }
+
+  .search-aria {
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+  }
+
+  .slider-aria {
+    height: 100%;
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+
+    .home-page-heading {
+      .heading-content {
+        h1 {
+          color: $white;
+        }
+        p {
+          letter-spacing: 8px;
+          color: $black;
+          color: $white;
+          line-height: 1.5px;
+        }
+
+        a {
+          color: $white;
+          transition: 0.2s ease-in-out;
+          &:hover {
+            padding-left: 8px;
+            color: yellow;
+          }
+        }
+
+        &::before {
+          content: "";
+          width: 140px;
+          height: 190px;
+          border: 5px solid $yellow;
+          position: absolute;
+          top: -50px;
+          left: -48px;
+          z-index: -1;
+          clip-path: polygon(
+            100% 25%,
+            57% 32%,
+            57% 68%,
+            0% 69%,
+            0% 85%,
+            69% 85%,
+            68% 64%,
+            100% 64%,
+            100% 100%,
+            0% 100%,
+            0% 0%,
+            100% 0%
+          );
+        }
+      }
+    }
+  }
+
+  .search-icon-wrapper {
+    width: 100%;
+    height: 100%;
+    & > div {
+      height: 100%;
+      display: grid;
+      place-items: center;
+      button {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    cursor: pointer;
+    i {
+      transition: 0.2s ease-in-out;
+    }
+    &:hover {
+      i {
+        color: $yellow;
+      }
+    }
+  }
+
+  .top-page-icon-wrapper {
+    width: 100%;
+    height: 100%;
+    & > div {
+      height: 100%;
+      display: grid;
+      place-items: center;
+
+      button {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    i {
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      color: $yellow;
+      transform: translateY(-4px);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
